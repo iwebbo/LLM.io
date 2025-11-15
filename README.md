@@ -13,17 +13,21 @@
 
 ## 📋 Table of Contents
 
-1. [Overview](#overview)
-2. [Features](#features)
-3. [Supported Providers](#supported-providers)
-4. [Architecture](#architecture)
-5. [Installation](#installation)
-6. [Configuration](#configuration)
-7. [Security & GDPR](#security--gdpr)
-8. [Usage](#usage)
-9. [API Reference](#api-reference)
-10. [Development](#development)
-11. [Troubleshooting](#troubleshooting)
+1. [Overview](#-overview)  
+2. [Features](#-features)  
+3. [Supported Providers](#-supported-providers)  
+4. [Architecture](#️-architecture)  
+5. [Installation](#-installation)  
+6. [Configuration](#️-configuration)  
+7. [Security & GDPR](#-security--gdpr)  
+8. [Usage](#-usage)  
+9. [API Reference](#-api-reference)  
+10. [Development](#️-development)  
+11. [Troubleshooting](#-troubleshooting)  
+12. [License](#-license)  
+13. [Contributing](#-contributing)  
+14. [Support](#-support)  
+15. [Roadmap](#-roadmap)
 
 ---
 
