@@ -12,8 +12,6 @@
 ![React](https://img.shields.io/badge/React-4EAA25?style=for-the-badge&logo=React&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-0078D6?style=for-the-badge&logo=Docker&logoColor=black)
 
----
-
 ## 📋 Table of Contents
 
 1. [Overview](#overview)
@@ -28,8 +26,6 @@
 10. [Development](#development)
 11. [Troubleshooting](#troubleshooting)
 
----
-
 ## 🎯 Overview
 
 LLM.io is a full-stack web application that enables interaction with **13+ LLM providers** through a unified interface. Designed for developers and enterprises needing flexibility, traceability, and GDPR compliance.
@@ -43,8 +39,6 @@ LLM.io is a full-stack web application that enables interaction with **13+ LLM p
 - ✅ **Analytics dashboard**: Real-time token usage tracking per provider/model
 - ✅ **Real-time streaming**: Progressive responses via Server-Sent Events
 - ✅ **GDPR security**: AES-256 encryption, JWT, compliant storage
-
----
 
 ## 🚀 Features
 
@@ -69,14 +63,10 @@ LLM.io is a full-stack web application that enables interaction with **13+ LLM p
 - **Rate Limiting**: Abuse protection (60 req/min, configurable)
 - **Multi-origin CORS**: Simultaneous frontend/mobile/desktop support
 
----
-
 ## 🌐 Supported Providers
 
 All providers are fully integrated with **model auto-discovery**, **real-time streaming**, **token tracking**, and **temperature control**.  
 Chain of Thought support is **automatically detected and enabled** in-app when available — no configuration needed.
-
----
 
 ### Cloud Providers
 
@@ -106,8 +96,6 @@ Chain of Thought support is **automatically detected and enabled** in-app when a
 ---
 
 **Chain of Thought Note**: Models with ✅ automatically use optimized parameters (high max_tokens, low temperature). Users can verify support in-app via model selection — if Chain of Thought is available, the option is enabled.
-
----
 
 ## 🏗️ Architecture
 
@@ -185,8 +173,6 @@ llm.io/
 - **Nginx** (reverse proxy)
 - **Uvicorn** (ASGI)
 
----
-
 ## 📦 Installation
 
 ### Prerequisites
@@ -251,8 +237,6 @@ npm run dev
 
 </details>
 
----
-
 ## ⚙️ Configuration
 
 ### 1. Secret Generation
@@ -306,8 +290,6 @@ MAX_RECONNECT_ATTEMPTS=5
 RATE_LIMIT_PER_MINUTE=60
 ```
 
----
-
 ## 🔒 Security & GDPR
 
 ### GDPR Compliance
@@ -323,7 +305,6 @@ RATE_LIMIT_PER_MINUTE=60
 CLIENT → HTTPS → NGINX (Rate Limit, CORS) → FASTAPI (JWT) → POSTGRESQL (RLS, Encrypted Keys)
 ```
 
----
 
 ## 🎮 Usage
 
@@ -354,8 +335,6 @@ Adjust per conversation (0.0 = factual, 2.0 = creative)
 
 Real-time token usage by provider/model/day
 
----
-
 ## 📡 API Reference
 
 ### Auth
@@ -377,8 +356,6 @@ Real-time token usage by provider/model/day
 
 **POST /api/chat/send** → SSE stream
 
----
-
 ## 🛠️ Development
 
 ### Add New Provider
@@ -386,8 +363,6 @@ Real-time token usage by provider/model/day
 1. Implement `BaseLLMProvider` subclass
 2. Register in `ProviderFactory`
 3. Add to frontend `PROVIDER_TYPES`
-
----
 
 ## 🐛 Troubleshooting
 
@@ -404,26 +379,19 @@ docker-compose restart db
 ### CORS
 Update `CORS_ORIGINS` and restart backend
 
----
 
 ## 📝 License
 
 MIT - see [LICENSE](LICENSE)
 
----
-
 ## 🤝 Contributing
 
 Fork → Branch → Commit → PR
-
----
 
 ## 📞 Support
 
 - GitHub Issues
 - support@llm.io
-
----
 
 ## 🎯 Roadmap
 
@@ -431,7 +399,5 @@ Fork → Branch → Commit → PR
 - [ ] Fine-tuning UI
 - [ ] Real-time collaboration
 - [ ] Mobile app
-
----
 
 **Built with ❤️ for the LLM community**
