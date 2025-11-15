@@ -11,6 +11,17 @@
 ![React](https://img.shields.io/badge/React-4EAA25?style=for-the-badge&logo=React&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-0078D6?style=for-the-badge&logo=Docker&logoColor=black)
 
+## Demo
+
+### Login page
+<img width="1917" height="908" alt="image" src="https://github.com/user-attachments/assets/0ad3128f-df2c-40e0-a0a8-7f65b2113cce" />
+
+### Dashboard
+<img width="1899" height="906" alt="image" src="https://github.com/user-attachments/assets/dd1a83dc-b4ee-483e-a242-29876be3acca" />
+
+### Chat 
+<img width="1916" height="905" alt="image" src="https://github.com/user-attachments/assets/ccdc33b1-fb48-4753-9f13-becd98df2d90" />
+
 ## 📋 Table of Contents
 
 1. [Overview](#overview)
