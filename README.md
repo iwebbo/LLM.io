@@ -1,14 +1,13 @@
+
+<img width="800" height="800" alt="llmiov2" src="https://github.com/user-attachments/assets/13c28846-185a-45f1-a144-d0325cba365c" />
+
 # LLM.io - Multi-Provider Chat Application
 
 **Universal chat platform with multi-provider support, advanced template management, token tracking, and GDPR compliance**
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Docker](https://img.shields.io/badge/docker-ready-blue.svg)](https://www.docker.com/)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-green.svg)](https://fastapi.tiangolo.com/)
-[![React](https://img.shields.io/badge/React-18+-blue.svg)](https://reactjs.org/)
-
 ![License](https://img.shields.io/badge/MIT-00599C?style=for-the-badge&logo=MIT&logoColor=black)
 ![Python](https://img.shields.io/badge/Python-4EAA25?style=for-the-badge&logo=Python&logoColor=black)
+![FastAPI](https://img.shields.io/badge/FastAPI-4EAA25?style=for-the-badge&logo=FastAPI&logoColor=black)
 ![React](https://img.shields.io/badge/React-4EAA25?style=for-the-badge&logo=React&logoColor=black)
 ![Docker](https://img.shields.io/badge/Docker-0078D6?style=for-the-badge&logo=Docker&logoColor=black)
 
