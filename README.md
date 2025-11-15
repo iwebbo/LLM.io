@@ -1,4 +1,3 @@
-```markdown
 # LLM.io - Multi-Provider Chat Application
 
 **Universal chat platform with multi-provider support, advanced template management, token tracking, and GDPR compliance**
@@ -436,4 +435,3 @@ Fork → Branch → Commit → PR
 ---
 
 **Built with ❤️ for the LLM community**
-```
