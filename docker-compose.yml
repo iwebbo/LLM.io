@@ -1,0 +1,64 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:15-alpine
+    container_name: llmio-db
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB:-llmio}
+      POSTGRES_USER: ${POSTGRES_USER:-llmio}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-llmio_password}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U llmio"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - llmio-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: llmio-backend
+    env_file:
+      - ./backend/.env
+    environment:
+      DATABASE_URL: postgresql://${POSTGRES_USER:-llmio}:${POSTGRES_PASSWORD:-llmio_password}@db:5432/${POSTGRES_DB:-llmio}
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+    networks:
+      - llmio-network
+    restart: unless-stopped
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: llmio-frontend
+    ports:
+      - "80:80"
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    networks:
+      - llmio-network
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+    driver: local
+
+networks:
+  llmio-network:
+    driver: bridge
