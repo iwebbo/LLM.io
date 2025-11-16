@@ -37,10 +37,10 @@
 <img width="1917" height="908" alt="image" src="https://github.com/user-attachments/assets/0ad3128f-df2c-40e0-a0a8-7f65b2113cce" />
 
 ### Dashboard
-<img width="1899" height="906" alt="image" src="https://github.com/user-attachments/assets/dd1a83dc-b4ee-483e-a242-29876be3acca" />
+<img width="1915" height="907" alt="image" src="https://github.com/user-attachments/assets/fa5f08c6-d390-4528-90a2-3bbe7ded698c" />
 
 ### Chat 
-<img width="1916" height="905" alt="image" src="https://github.com/user-attachments/assets/ccdc33b1-fb48-4753-9f13-becd98df2d90" />
+<img width="1917" height="907" alt="image" src="https://github.com/user-attachments/assets/94fd796b-4068-41db-b390-f532413d7e61" />
 
 ## 🎯 Overview
 
