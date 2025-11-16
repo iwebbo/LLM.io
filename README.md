@@ -214,6 +214,14 @@ python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().
 
 # 4. Edit backend/.env with your secrets
 
+# 4.1 Edit backend/.env if (need to be run from VM/PROD Server)
+CORS_ORIGINS=http://localhost:5173,http://localhost:3000,http://localhost,http://localhost:80
+# Change by your hostname.fqdn or IP
+
+# 4.1 Edit frontend/.env if (need to be run from VM/PROD Server)
+VITE_API_URL=http://localhost:8000 
+# Change by your hostname.fqdn or IP
+
 # 5. Start application
 docker-compose up -d
 
@@ -239,6 +247,14 @@ createdb llmio
 # Config
 cp .env.example .env
 # Edit .env
+
+# Edit backend/.env if (need to be run from VM/PROD Server)
+CORS_ORIGINS=http://localhost:5173,http://localhost:3000,http://localhost,http://localhost:80
+# Change by your hostname.fqdn or IP
+
+# Edit frontend/.env if (need to be run from VM/PROD Server)
+VITE_API_URL=http://localhost:8000 
+# Change by your hostname.fqdn or IP
 
 # Run server
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
