@@ -731,7 +731,7 @@ const Chat = () => {
                       textAlign: 'center',
                     }}
                   >
-                    {streaming ? 'Grok is thinking...' : 'Press Enter to send • Shift+Enter for new line'}
+                    {streaming ? 'LLM.io is thinking...' : 'Press Enter to send • Shift+Enter for new line'}
                   </div>
                 </div>
               </div>

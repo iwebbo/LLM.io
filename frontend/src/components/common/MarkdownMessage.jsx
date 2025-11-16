@@ -11,6 +11,7 @@ import { Copy, Check } from 'lucide-react';
  * - Coloration syntaxique du code (Prism + thème VS Code Dark+)
  * - Sécurisé (pas de XSS)
  * - Optimisé avec memo()
+ * - FIX: Débordement horizontal corrigé
  */
 const MarkdownMessage = ({ content }) => {
   return (
@@ -33,7 +34,13 @@ const MarkdownMessage = ({ content }) => {
             };
 
             return !inline && language ? (
-                <div style={{ position: 'relative', margin: '0.5em 0' }}>
+                <div style={{ 
+                  position: 'relative', 
+                  margin: '0.5em 0',
+                  width: '100%',
+                  maxWidth: '100%',
+                  overflow: 'hidden'
+                }}>
                 <SyntaxHighlighter
                     {...props}
                     style={vscDarkPlus}
@@ -44,6 +51,21 @@ const MarkdownMessage = ({ content }) => {
                     borderRadius: '0.375rem',
                     fontSize: '0.875rem',
                     padding: '1rem',
+                    width: '100%',
+                    maxWidth: '100%',
+                    overflowX: 'auto',
+                    overflowY: 'hidden',
+                    }}
+                    codeTagProps={{
+                      style: {
+                        whiteSpace: 'pre',
+                        wordWrap: 'normal',
+                        wordBreak: 'normal',
+                        overflowWrap: 'normal',
+                        display: 'block',
+                        width: '100%',
+                        maxWidth: '100%'
+                      }
                     }}
                 >
                     {codeString}
@@ -80,12 +102,12 @@ const MarkdownMessage = ({ content }) => {
                     {copied ? (
                     <>
                         <Check size={12} />
-                        Copy
+                        Copied
                     </>
                     ) : (
                     <>
                         <Copy size={12} />
-                        Paste
+                        Copy
                     </>
                     )}
                 </button>
@@ -113,6 +135,11 @@ const MarkdownMessage = ({ content }) => {
                 <code
                 className={`${className} px-1 py-0.5 rounded bg-gray-100 text-red-600 text-xs`}
                 {...props}
+                style={{
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word'
+                }}
                 >
                 {children}
                 </code>
@@ -121,7 +148,7 @@ const MarkdownMessage = ({ content }) => {
           // Amélioration des tableaux
           table({ children }) {
             return (
-              <div className="overflow-x-auto">
+              <div className="overflow-x-auto" style={{ width: '100%', maxWidth: '100%' }}>
                 <table className="min-w-full divide-y divide-gray-300 border border-gray-300 rounded">
                   {children}
                 </table>
@@ -140,6 +167,22 @@ const MarkdownMessage = ({ content }) => {
           },
           td({ children }) {
             return <td className="px-3 py-2 text-sm text-gray-900">{children}</td>;
+          },
+          // Fix pour les longs liens et URL
+          a({ href, children, ...props }) {
+            return (
+              <a 
+                href={href} 
+                {...props}
+                style={{
+                  overflowWrap: 'break-word',
+                  wordWrap: 'break-word',
+                  wordBreak: 'break-word'
+                }}
+              >
+                {children}
+              </a>
+            );
           },
         }}
       >
