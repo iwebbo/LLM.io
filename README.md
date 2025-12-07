@@ -1,5 +1,5 @@
 
-<img width="800" height="800" alt="llmiov2" src="https://github.com/user-attachments/assets/13c28846-185a-45f1-a144-d0325cba365c" />
+<img width="600" height="600" alt="llmiov2" src="https://github.com/user-attachments/assets/13c28846-185a-45f1-a144-d0325cba365c" />
 
 # LLM.io - Multi-Provider Chat Application
 
